@@ -44,6 +44,7 @@ article {
 }
 
 img {
+	padding: 10px;
 	vertical-align: top;
 }
 
@@ -1887,3 +1888,36 @@ transition-delay:0.8s;
 }
 
 
+
+.ta{
+	display: flex;
+	align-items:flex-end;
+}
+
+.ta-2{
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+table{
+	border: solid 1px saddlebrown;
+	border-collapse: collapse;
+}
+
+table th{
+	padding: 3px 50px;
+	text-align: center;
+	border: solid 0.1px saddlebrown;
+}
+
+table td{
+	padding: auto;
+	text-align: center;
+	border: solid 0.1px saddlebrown;
+}
+
+.gazou{
+	margin: 0px auto;
+	text-align: center;
+	padding: 50px 0px;
+}
