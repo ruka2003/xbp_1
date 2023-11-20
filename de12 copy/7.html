@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>第7回</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <center><h1>第7回　神大生におすすめな土地 </h1>
+    <h2>元町・中華街駅周辺</h2><br></center>
+    <br>
+    <a href="https://haveagood.holiday/areas/1338">元町・中華街周辺スポット　紹介</a>
+　　<br>
+    <br>
+    ＜条件＞
+    <li>家賃　1～４万以内</li>
+    <li>大学までの時間</li>
+    <center><img src="images/スクリーンショット 2021-11-16 161213.png"width="60%"><br>
+    <center><img src="images/Figure_1.png"width="80%"><br>
+        <br>
+　　 新高島駅から徒歩5分でみなとみらいキャンパスにつけるため、みなとみらい線に絞って考えました<br>
+    <br>
+    <center><h3>オススメpoint</h3></center><br>
+    <center><li>夜の遅い時間でも明るい</li><br></center>
+    人が多い地域でもあるため、バイト帰りの遅い時間でも暗い夜道を歩くことなく帰ることができます。
+    <center><li>バイト先が探しやすい</li><br></center>
+　　近くにみなとみらいや横浜駅があるため、いろいろな仕事を選ぶことができます。<br>
+　　また、学校の近くにあるため学校の近くでバイトをしてから家に帰るという選択もできます。
+
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
+        <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
+        <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
+        <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
+        <li style="background-color:#EFF;">plt.rcParams['font.size'] = 5</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">data_path = "./data.csv"</li>
+        <li style="background-color:#EEF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">print(df_data.columns)</li>
+        <li style="background-color:#EFF;">print(df_data.shape)</li>
+        <li style="background-color:#EEF;">rent_upper = int(input("希望家賃の上限は？(万円)"))</li>
+        <li style="background-color:#EFF;">rent_lower = int(input("希望家賃の下限は？(万円)"))</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">mask = (df_data.loc[:, "家賃"] &lt; rent_upper) &amp; (df_data.loc[:, "家賃"] &gt; rent_lower) &amp; (df_data.loc[:, "路線"] == "みなとみらい線")</li>
+        <li style="background-color:#EEF;">df_mask = df_data[mask]</li>
+        <li style="background-color:#EFF;">print(df_mask.loc[0:, "路線"])</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print(df_mask.loc[:, ["駅", "家賃"]])</li>
+        <li style="background-color:#EEF;"># df_data.loc[:, ["路線", "家賃"]].plot.scatter(x="路線", y="家賃",s=100, alpha=0.2)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">x = df_mask.loc[:, "路線"]</li>
+        <li style="background-color:#EFF;">y = df_mask.loc[:, "合計時間"]</li>
+        <li style="background-color:#EEF;">plt.scatter(x, y, s=100, alpha=0.2)</li>
+        <li style="background-color:#EFF;">plt.xlabel("路線")</li>
+        <li style="background-color:#EEF;">plt.ylabel("合計時間")</li>
+        <li style="background-color:#EFF;">plt.xticks(rotation=90)</li>
+        <li style="background-color:#EEF;">plt.subplots_adjust(left=0.02, right=0.98)</li>
+        <li style="background-color:#EFF;">plt.show()</li>
+        <li style="background-color:#EEF;"></li>
+        </ol></code>
+
+</div>
+</body>
+</html>
